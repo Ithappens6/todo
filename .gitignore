@@ -1,0 +1,16 @@
+# Python
+*.pyc
+__pycache__/
+
+# Environment Variables
+.env
+
+# Django
+db.sqlite3
+media/
+
+# Virtual Environment
+venv/
+env/
+hunar/
+
