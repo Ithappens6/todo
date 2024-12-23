@@ -1,3 +1,4 @@
+
 # Task Manager Backend
 
 This is a Django-based backend for a Task Manager application, providing RESTful APIs for managing users, tasks, and tags. The project includes token-based authentication, task hierarchy management, and CRUD operations.
@@ -109,6 +110,11 @@ Use the superuser credentials you created earlier.
   http://127.0.0.1:8000/api/
   ```
 
+  For API documentation go to
+  ```
+  http://127.0.0.1:8000/swagger/
+  ```
+
 ---
 
 ## Project Structure
@@ -134,7 +140,3 @@ project/
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
----
-
-
-Let me know if further changes are needed! 😊
