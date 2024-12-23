@@ -45,7 +45,7 @@ class TaskListCreateView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = TaskPagination  # Enable pagination
     filter_backends = [DjangoFilterBackend, OrderingFilter]  # Enable filtering and sorting
-    filterset_fields = ['status', 'tags']  # Fields to filter by
+    filterset_fields = ['status', 'tags', 'parent_task']  # Fields to filter by
     ordering_fields = ['due_date', 'created_at']  # Fields to sort by
     ordering = ['due_date']  # Default ordering
 
