@@ -36,13 +36,13 @@ cd task-manager-backend
 
 ```bash
 # Create a virtual environment
-python -m venv hunar
+python -m venv todo_venv
 
 # Activate the virtual environment
 # On Windows:
-hunar\Scripts\activate
+todo_venv\Scripts\activate
 # On macOS/Linux:
-source hunar/bin/activate
+source todo_venv/bin/activate
 ```
 
 ### Step 3: Install Dependencies
