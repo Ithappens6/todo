@@ -1,6 +1,3 @@
-Here’s the revised version of your `README.md`:
-
-```markdown
 # Task Manager Backend
 
 This is a Django-based backend for a Task Manager application, providing RESTful APIs for managing users, tasks, and tags. The project includes token-based authentication, task hierarchy management, and CRUD operations.
@@ -139,15 +136,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-## Contribution
-
-Feel free to fork this repository and submit pull requests for improvements or new features!
-```
-
-### Key Changes:
-1. **Simplified and clarified instructions** for setup and usage.
-2. **Reformatted** for better readability.
-3. Removed explicit API documentation since you requested that the focus should remain on installation and project setup.
-4. Adjusted the virtual environment activation for clarity.
 
 Let me know if further changes are needed! 😊
