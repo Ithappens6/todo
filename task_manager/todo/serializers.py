@@ -94,20 +94,27 @@ class TaskSerializer(serializers.ModelSerializer):
         return value
 
     def update(self, instance, validated_data):
-        # Handle adding and removing tags
-        add_tag_ids = validated_data.pop('add_tag_ids', [])
-        remove_tag_ids = validated_data.pop('remove_tag_ids', [])
+        # Retrieve tag objects directly from validated_data
+        add_tags = validated_data.pop('add_tag_ids', [])
+        remove_tags = validated_data.pop('remove_tag_ids', [])
 
-        if add_tag_ids:
-            user_tags = Tag.objects.filter(id__in=add_tag_ids, created_by=self.context['request'].user)
-            instance.tags.add(*user_tags)
+        # Add tags to the task
+        if add_tags:
+            instance.tags.add(*add_tags)
 
-        if remove_tag_ids:
-            user_tags = Tag.objects.filter(id__in=remove_tag_ids, created_by=self.context['request'].user)
-            instance.tags.remove(*user_tags)
+        # Remove tags from the task
+        if remove_tags:
+            instance.tags.remove(*remove_tags)
 
-        # Update other fields
-        return super().update(instance, validated_data)
+        # Update other fields in the task
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+
+        return instance
+
+
+
 
 
 
