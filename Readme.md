@@ -109,6 +109,11 @@ Use the superuser credentials you created earlier.
   http://127.0.0.1:8000/api/
   ```
 
+  For API documentation go to
+  ```
+  http://127.0.0.1:8000/swagger/
+  ```
+
 ---
 
 ## Project Structure
